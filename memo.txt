@@ -1,0 +1,6 @@
+## secret
+dose8d67350395cc8270f4020d45a40df78f
+
+## cliant id (= Application id)
+769c9f18-0592-4b53-abef-f7c0b1def462
+
