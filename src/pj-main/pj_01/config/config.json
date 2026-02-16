@@ -1,0 +1,10 @@
+{
+  "SST001": {
+    "source_table": "${CATALOG}.my_schema.my_table1",
+    "target_table": "${CATALOG}.my_schema.my_table2"
+  },
+  "SGT001": {
+    "source_table": "${CATALOG}.my_schema.my_table3",
+    "target_table": "${CATALOG}.my_schema.my_table4"
+  }
+}
