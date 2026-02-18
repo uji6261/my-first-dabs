@@ -17,3 +17,5 @@ print(config["target_table"])
 
 print("SST001を実行しました")
 print(env)
+
+print("Git Folder作成しました")
