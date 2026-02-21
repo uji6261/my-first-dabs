@@ -9,3 +9,7 @@ dbutils.widgets.text("ENV", "local_test")
 env = dbutils.widgets.get("ENV")
 
 print(env)
+
+# COMMAND ----------
+
+print('test')
