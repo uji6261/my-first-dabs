@@ -39,7 +39,7 @@ resources:
             notebook_path: ../src/pj-main/pj_01/SST/SST001.py
             # Notebookで受け取る変数はここで指定
             base_parameters:
-              ENV: ${var.env_name}
+              env: ${var.env_name}
 
         - task_key: SGT001
           # ここで依存関係を指定する(SST001が終わるまで待つ)
@@ -49,5 +49,5 @@ resources:
             notebook_path: ../src/pj-main/pj_01/SGT/SGT001.py
             # Notebookで受け取る変数はここで指定
             base_parameters:
-              ENV: ${var.env_name}
+              env: ${var.env_name}
 
