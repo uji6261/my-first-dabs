@@ -2,6 +2,17 @@ name: "Manual Deploy Databricks Bundle"
 
 # 手動実行のトリガー設定
 on:
+  # 1. 自動実行：mainブランチにPushされたら実行
+  push:
+    branches:
+      - main  # あなたが開発でPushしているブランチ名に合わせてください
+    # 特定のファイルが変わった時だけ動かしたい場合は以下を追加
+    paths:
+      - 'src/**'
+      - 'databricks.yml'
+      - 'resources/**'
+      
+  # 2. 手動実行：これまでの手動ボタンも残しておく
   workflow_dispatch:
     inputs:
       deploy_target:
@@ -27,7 +38,10 @@ jobs:
 
       - name: Deploy Bundle
         # 入力されたターゲット（dev または prod）を -t に渡す
-        run: databricks bundle deploy -t ${{ github.event.inputs.deploy_target }}
+        run:
+          # 自動実行(push)の場合は 'dev' を、手動の場合は入力値を使用する
+          TARGET=${{ github.event.inputs.deploy_target || 'dev' }}
+          databricks bundle deploy -t $TARGET
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_CLIENT_ID: ${{ secrets.DATABRICKS_CLIENT_ID }}
