@@ -8,8 +8,8 @@ bundle:
 permissions:
   - service_principal_name: "769c9f18-0592-4b53-abef-f7c0b1def462"
     level: CAN_MANAGE
-  - group_name: "admins"
-    level: CAN_MANAGE
+  # - group_name: "admins"
+  #   level: CAN_MANAGE
 
 include:
   - resources/*.yml
