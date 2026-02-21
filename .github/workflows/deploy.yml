@@ -38,10 +38,9 @@ jobs:
 
       - name: Deploy Bundle
         # 入力されたターゲット（dev または prod）を -t に渡す
-        run:
-          # 自動実行(push)の場合は 'dev' を、手動の場合は入力値を使用する
-          TARGET=${{ github.event.inputs.deploy_target || 'dev' }}
-          databricks bundle deploy -t $TARGET
+        run: |
+          # 手動実行時は入力値、Push時は 'dev' を使う
+          databricks bundle deploy -t ${{ github.event.inputs.deploy_target || 'dev' }}
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_CLIENT_ID: ${{ secrets.DATABRICKS_CLIENT_ID }}
