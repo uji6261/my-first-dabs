@@ -4,6 +4,13 @@ bundle:
   name: my_first_dabs
   uuid: d280ea78-42ce-4a30-8131-50799acf2248
 
+# この bundle 自体のデプロイ権限を定義
+permissions:
+  - service_principal_name: "769c9f18-0592-4b53-abef-f7c0b1def462"
+    level: CAN_MANAGE
+  - group_name: "admins"
+    level: CAN_MANAGE
+
 include:
   - resources/*.yml
   - resources/*/*.yml
