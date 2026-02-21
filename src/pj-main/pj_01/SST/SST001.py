@@ -5,10 +5,10 @@ print(notebook_name)
 
 # COMMAND ----------
 
-dbutils.widgets.text("ENV", "local_test")
-env = dbutils.widgets.get("ENV")
+dbutils.widgets.text("env", "local_test")
+ENV = dbutils.widgets.get("env")
 
-print(env)
+print(ENV)
 
 # COMMAND ----------
 
