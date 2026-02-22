@@ -13,11 +13,11 @@ resources:
           unit: DAYS
 
       # ジョブパラメータ
-      parameters:
-        - name: catalog
-          default: ${var.catalog}
-        - name: schema
-          default: ${var.schema}
+      # parameters:
+      #   - name: catalog
+      #     default: ${var.catalog}
+      #   - name: schema
+      #     default: ${var.schema}
       
       # コンピュート(Taskにそれぞれ定義する必要あり)
 
