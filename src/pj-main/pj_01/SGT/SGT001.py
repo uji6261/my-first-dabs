@@ -1,4 +1,8 @@
 # Databricks notebook source
+# /// script
+# [tool.databricks.environment]
+# environment_version = "5"
+# ///
 # MAGIC %run ../config/_env_config
 
 # COMMAND ----------
@@ -13,3 +17,7 @@ print(config["target_table"])
 # COMMAND ----------
 
 print("SGT001を実行しました")
+
+# COMMAND ----------
+
+print("SGT001を更新しました。mユーザーより")
