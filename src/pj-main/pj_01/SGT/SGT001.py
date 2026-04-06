@@ -16,8 +16,9 @@ print(config["target_table"])
 
 # COMMAND ----------
 
-print("SGT001を実行しました")
+print("SGT001を実行しました？？")
 
 # COMMAND ----------
 
 print("SGT001を更新しました。mユーザーより")
+print("branch_mから更新してます。")
